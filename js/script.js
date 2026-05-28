@@ -4,26 +4,28 @@
    ===================================================================== */
 
 const CONFIG = {
-  /* 1) CALENDLY ---------------------------------------------------------
-     Paste your Calendly scheduling link. Create it at calendly.com.
-     Every "Book via Calendly" / "Book a Session" button opens this popup. */
-  calendlyUrl: "https://calendly.com/your-handle/intro-session",
+  /* CALENDLY -----------------------------------------------------------
+     Beyond Realms uses a simple two-step flow:
+       1) Client books a time here in Calendly (and enters their WhatsApp
+          number so Smiti knows where to call).
+       2) The Calendly CONFIRMATION page + email contains the Revolut
+          payment link with a note to pay to confirm.
+     >>> The Revolut link is added inside Calendly's settings, NOT here. <<<
 
-  /* 2) STRIPE PAYMENT LINKS --------------------------------------------
-     The simplest, no-server option. In your Stripe Dashboard go to
-     Payments → Payment Links, create one product per service, then paste
-     each link below. Each "Book Now" / "Pay via Stripe" button uses these.
-     (See README.md for the alternative Stripe Buy Button method.) */
-  stripeLinks: {
-    tarot15:   "https://buy.stripe.com/REPLACE_tarot15",   // Tarot Reading 15 min — £23
-    tarot45:   "https://buy.stripe.com/REPLACE_tarot45",   // Tarot Reading 45 min — £69
-    advanced:  "https://buy.stripe.com/REPLACE_advanced",  // Advanced Guidance — £111
-    crystal:   "https://buy.stripe.com/REPLACE_crystal",   // Crystal Guidance — £19
-    cleansing: "https://buy.stripe.com/REPLACE_cleansing"  // Energy Cleansing & Cord Cutting — £23
-  },
+     'calendlyUrl' is the general link used by the "Book a Session" /
+     "Book via Calendly" buttons. 'calendlyLinks' are one event-type per
+     session, used by each "Book Now" button. Create one Calendly event
+     per session (with the correct duration) and paste its link below.
+     Any session left as a REPLACE placeholder falls back to calendlyUrl. */
+  calendlyUrl: "https://calendly.com/your-handle",
 
-  /* If true, pay buttons open in a new tab; if false, same tab. */
-  payInNewTab: true
+  calendlyLinks: {
+    tarot15:   "https://calendly.com/your-handle/REPLACE_tarot-15min",
+    tarot45:   "https://calendly.com/your-handle/REPLACE_tarot-45min",
+    advanced:  "https://calendly.com/your-handle/REPLACE_advanced",
+    crystal:   "https://calendly.com/your-handle/REPLACE_crystal",
+    cleansing: "https://calendly.com/your-handle/REPLACE_cleansing"
+  }
 };
 
 /* =====================================================================
@@ -35,29 +37,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
-  /* ---- Calendly buttons ---- */
-  const openCalendly = () => {
-    if (window.Calendly && CONFIG.calendlyUrl) {
-      Calendly.initPopupWidget({ url: CONFIG.calendlyUrl });
+  /* ---- Open Calendly (general or a specific event) ---- */
+  const openCalendly = (url) => {
+    const target = url || CONFIG.calendlyUrl;
+    if (window.Calendly && target) {
+      Calendly.initPopupWidget({ url: target });
     } else {
-      window.open(CONFIG.calendlyUrl, "_blank", "noopener");
+      window.open(target, "_blank", "noopener");
     }
   };
+
+  /* General "Book a Session" / "Book via Calendly" buttons */
   document.querySelectorAll("[data-calendly]").forEach(btn =>
-    btn.addEventListener("click", openCalendly)
+    btn.addEventListener("click", () => openCalendly(CONFIG.calendlyUrl))
   );
 
-  /* ---- Stripe pay buttons ---- */
-  document.querySelectorAll("[data-pay]").forEach(btn => {
+  /* Per-session "Book Now" buttons → that session's Calendly event
+     (falls back to the general link if not set yet). */
+  document.querySelectorAll("[data-book]").forEach(btn => {
     btn.addEventListener("click", () => {
-      const key = btn.getAttribute("data-pay");
-      const url = CONFIG.stripeLinks[key];
-      if (!url || url.includes("REPLACE")) {
-        alert("Payment link not set yet.\nAdd your Stripe Payment Link in js/script.js → CONFIG.stripeLinks." );
-        return;
-      }
-      if (CONFIG.payInNewTab) window.open(url, "_blank", "noopener");
-      else window.location.href = url;
+      const key = btn.getAttribute("data-book");
+      let url = CONFIG.calendlyLinks[key];
+      if (!url || url.includes("REPLACE")) url = CONFIG.calendlyUrl;
+      openCalendly(url);
     });
   });
 
