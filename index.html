@@ -64,16 +64,16 @@
         </h1>
         <div class="rule" aria-hidden="true"><span class="diamond"></span></div>
         <p class="hero-sub">
-          Intuitive Tarot, Numerology &amp; Crystal Guidance to help you gain
+          Intuitive Tarot, Astrology &amp; Energy Guidance to help you gain
           insight, heal your energy and step into your highest path.
         </p>
         <div class="hero-actions">
           <button class="btn btn-solid" data-calendly>
             <span class="ico" aria-hidden="true">&#128197;</span> Book via Calendly
           </button>
-          <button class="btn btn-gold" data-pay="bundle">
-            <span class="ico" aria-hidden="true">&#10022;</span> Pay via Stripe
-          </button>
+          <a class="btn btn-gold" href="#services">
+            <span class="ico" aria-hidden="true">&#10022;</span> View Sessions
+          </a>
         </div>
         <p class="hero-note"><span class="diamond sm"></span> Guided by intuition. Rooted in love.</p>
       </div>
@@ -116,12 +116,21 @@
       <div class="about-copy reveal" data-delay="1">
         <h2 class="section-title">About Beyond Realms</h2>
         <p class="script-line">Intuition is your inner compass.</p>
+        <p class="founder-line">Smiti Jani &middot; Founder &middot; London</p>
         <p class="lead">
-          I'm here to help you tune in, gain clarity and align with your soul's
-          truth. Through Tarot, Numerology and Crystals, every session is
-          personalised to support your journey with love, honesty and deep
-          spiritual insight.
+          Beyond Realms is led by Smiti Jani, who has worked with tarot,
+          astrology, Reiki and intuitive guidance since 2009 &mdash; supporting
+          people through transition, uncertainty and emotional complexity.
         </p>
+        <p class="lead">
+          Her work is centred on clarity: not prediction for curiosity, but
+          understanding for direction. She helps clients recognise the deeper
+          patterns behind their experiences, so they can make decisions from a
+          clearer internal place. Each session blends intuitive reading with
+          grounded interpretation, holding space for both emotional understanding
+          and practical awareness.
+        </p>
+        <p class="about-tag"><span class="diamond sm"></span> Sessions are held via WhatsApp video call &mdash; available worldwide.</p>
 
         <ul class="value-row">
           <li>
@@ -156,53 +165,76 @@
   <!-- ============ SERVICES ============ -->
   <section class="services" id="services">
     <div class="container">
-      <p class="eyebrow"><span class="diamond sm"></span> What I Offer <span class="diamond sm"></span></p>
+      <p class="eyebrow"><span class="diamond sm"></span> Sessions <span class="diamond sm"></span></p>
       <h2 class="section-title center">Guidance for Every Chapter of Your Life</h2>
+      <p class="section-intro">
+        Each session is designed to meet you where you are and bring clarity to
+        your current situation &mdash; whether you need quick guidance or deeper
+        insight. All sessions are held via WhatsApp video call, worldwide.
+      </p>
 
-      <div class="card-grid">
-        <!-- Tarot -->
+      <div class="card-grid cols-3">
+        <!-- Tarot 15 -->
         <article class="card reveal">
           <div class="card-ico" aria-hidden="true">
             <svg viewBox="0 0 48 64"><rect x="10" y="8" width="26" height="44" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(-8 23 30)"/><rect x="14" y="12" width="26" height="44" rx="3" fill="var(--card)" stroke="currentColor" stroke-width="1.5"/><path d="M27 24a8 8 0 1 0 0 14 10 10 0 0 1 0-14z" fill="currentColor"/></svg>
           </div>
           <h3>Tarot Reading</h3>
-          <p>Gain clarity on love, career, relationships and life situations.</p>
-          <p class="price">£45 <span>/ session</span></p>
-          <button class="btn btn-solid full" data-pay="tarot">Book Now</button>
+          <span class="badge">15 minutes</span>
+          <p>A focused session for one clear question or situation. Brings direct insight and immediate clarity.</p>
+          <p class="price">£23 <span>/ session</span></p>
+          <button class="btn btn-solid full" data-pay="tarot15">Book Now</button>
         </article>
 
-        <!-- Numerology -->
+        <!-- Tarot 45 -->
         <article class="card reveal" data-delay="1">
           <div class="card-ico" aria-hidden="true">
-            <svg viewBox="0 0 56 56"><text x="10" y="24" font-family="Cormorant Garamond, serif" font-size="20" fill="currentColor">7</text><text x="30" y="22" font-family="Cormorant Garamond, serif" font-size="18" fill="currentColor">3</text><text x="14" y="44" font-family="Cormorant Garamond, serif" font-size="18" fill="currentColor">3</text><text x="34" y="46" font-family="Cormorant Garamond, serif" font-size="20" fill="currentColor">9</text></svg>
+            <svg viewBox="0 0 48 64"><rect x="10" y="8" width="26" height="44" rx="3" fill="none" stroke="currentColor" stroke-width="1.5" transform="rotate(-8 23 30)"/><rect x="14" y="12" width="26" height="44" rx="3" fill="var(--card)" stroke="currentColor" stroke-width="1.5"/><path d="M27 24a8 8 0 1 0 0 14 10 10 0 0 1 0-14z" fill="currentColor"/></svg>
           </div>
-          <h3>Numerology Report</h3>
-          <p>Personalised numerology report for life path, purpose and future guidance.</p>
-          <p class="price">£55 <span>/ report</span></p>
-          <button class="btn btn-solid full" data-pay="numerology">Book Now</button>
+          <h3>Tarot Reading</h3>
+          <span class="badge">45 minutes</span>
+          <p>A deeper reading into patterns, emotions and influencing energies. Best for situations that feel layered or unclear.</p>
+          <p class="price">£69 <span>/ session</span></p>
+          <button class="btn btn-solid full" data-pay="tarot45">Book Now</button>
         </article>
 
+        <!-- Advanced -->
+        <article class="card featured reveal" data-delay="2">
+          <span class="ribbon">Most Complete</span>
+          <div class="card-ico" aria-hidden="true">
+            <svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="8" fill="none" stroke="currentColor" stroke-width="1.5"/><g stroke="currentColor" stroke-width="1.3"><line x1="28" y1="8" x2="28" y2="14"/><line x1="28" y1="42" x2="28" y2="48"/><line x1="8" y1="28" x2="14" y2="28"/><line x1="42" y1="28" x2="48" y2="28"/><line x1="14" y1="14" x2="18" y2="18"/><line x1="38" y1="38" x2="42" y2="42"/><line x1="42" y1="14" x2="38" y2="18"/><line x1="18" y1="38" x2="14" y2="42"/></g></svg>
+          </div>
+          <h3>Advanced Guidance</h3>
+          <span class="badge">Tarot + Astrology + Remedies</span>
+          <p>A detailed, personalised session combining tarot insight, astrological context and practical remedies. For deeper alignment in complex situations.</p>
+          <p class="price">£111 <span>/ session</span></p>
+          <button class="btn btn-gold full" data-pay="advanced">Book Now</button>
+        </article>
+      </div>
+
+      <h3 class="addon-head"><span class="diamond sm"></span> Support &amp; Add-On Guidance <span class="diamond sm"></span></h3>
+
+      <div class="card-grid cols-2">
         <!-- Crystal -->
-        <article class="card reveal" data-delay="2">
+        <article class="card reveal">
           <div class="card-ico" aria-hidden="true">
             <svg viewBox="0 0 56 56"><path d="M28 10l10 12-10 24-10-24z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M18 22h20M28 10v36" stroke="currentColor" stroke-width="1.2"/></svg>
           </div>
           <h3>Crystal Guidance</h3>
-          <p>Crystal energy guidance for healing, protection and manifestation.</p>
-          <p class="price">£35 <span>/ session</span></p>
+          <p>Simple, intuitive guidance on crystals suited to your current energy and needs.</p>
+          <p class="price">£19 <span>/ add-on</span></p>
           <button class="btn btn-solid full" data-pay="crystal">Book Now</button>
         </article>
 
-        <!-- Bundle -->
-        <article class="card featured reveal" data-delay="3">
-          <span class="ribbon">Best Value</span>
+        <!-- Cleansing -->
+        <article class="card reveal" data-delay="1">
           <div class="card-ico" aria-hidden="true">
-            <svg viewBox="0 0 64 56"><rect x="6" y="10" width="20" height="34" rx="3" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M16 22a6 6 0 1 0 0 11 8 8 0 0 1 0-11z" fill="currentColor"/><path d="M44 14l9 11-9 22-9-22z" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M35 25h18" stroke="currentColor" stroke-width="1.2"/></svg>
+            <svg viewBox="0 0 56 56"><path d="M20 46c-4-6-2-14 4-18 5-3 6-9 4-14 8 3 14 11 12 20-1 6-6 11-12 12" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M34 14l.9 2 2 .9-2 .9-.9 2-.9-2-2-.9 2-.9z" fill="currentColor"/></svg>
           </div>
-          <h3>Guidance Bundle</h3>
-          <p>Tarot + Numerology + Crystal Guidance <em>(Best Value)</em></p>
-          <p class="price">£99 <span>/ bundle</span></p>
-          <button class="btn btn-gold full" data-pay="bundle">Book Now</button>
+          <h3>Energy Cleansing &amp; Cord Cutting</h3>
+          <p>A focused energetic clearing to release emotional or energetic attachment and restore balance.</p>
+          <p class="price">£23 <span>/ add-on</span></p>
+          <button class="btn btn-solid full" data-pay="cleansing">Book Now</button>
         </article>
       </div>
     </div>
@@ -246,37 +278,47 @@
   <!-- ============ TESTIMONIALS ============ -->
   <section class="reviews" id="reviews">
     <div class="container">
-      <p class="eyebrow light">Kind Words From Souls I've Guided</p>
+      <p class="eyebrow light">Client Reflections</p>
+      <p class="reviews-intro">
+        Clients often arrive feeling mentally full, emotionally stuck, or uncertain
+        about a decision they have carried for some time. The experience is
+        described as clear, precise and unexpectedly grounding.
+      </p>
 
       <div class="carousel">
-        <button class="car-btn prev" aria-label="Previous testimonials">&#8249;</button>
+        <button class="car-btn prev" aria-label="Previous reflections">&#8249;</button>
 
         <div class="car-track" id="carTrack">
           <figure class="quote">
             <span class="q-mark" aria-hidden="true">&#10077;</span>
-            <blockquote>The reading was so accurate and helped me see things so clearly. I feel so much lighter now.</blockquote>
-            <figcaption><span class="who">— Sarah K.</span><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></figcaption>
+            <blockquote>This was extremely accurate. I did not need to explain much &mdash; you understood the situation immediately.</blockquote>
           </figure>
           <figure class="quote">
             <span class="q-mark" aria-hidden="true">&#10077;</span>
-            <blockquote>Her guidance is beautiful, insightful and very healing. Highly recommend!</blockquote>
-            <figcaption><span class="who">— Priya M.</span><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></figcaption>
+            <blockquote>I left with a level of clarity I had been trying to reach on my own for months.</blockquote>
           </figure>
           <figure class="quote">
             <span class="q-mark" aria-hidden="true">&#10077;</span>
-            <blockquote>I got my numerology report and it was spot on. So detailed and meaningful.</blockquote>
-            <figcaption><span class="who">— Ananya T.</span><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></figcaption>
+            <blockquote>The way everything was explained felt simple and exact. Nothing felt vague or general.</blockquote>
           </figure>
           <figure class="quote">
             <span class="q-mark" aria-hidden="true">&#10077;</span>
-            <blockquote>A calm, grounding session that gave me real direction. Thank you so much.</blockquote>
-            <figcaption><span class="who">— Maya R.</span><span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span></figcaption>
+            <blockquote>It helped me see my situation from a completely different perspective, and I finally felt able to decide.</blockquote>
           </figure>
         </div>
 
-        <button class="car-btn next" aria-label="Next testimonials">&#8250;</button>
+        <button class="car-btn next" aria-label="Next reflections">&#8250;</button>
       </div>
       <div class="car-dots" id="carDots" aria-hidden="true"></div>
+
+      <p class="reviews-outro">
+        Many clients find that the insight continues to settle over time, bringing
+        more clarity as situations naturally unfold.
+      </p>
+      <!-- Optional: link real Google reviews here once available.
+      <div class="reviews-cta"><a class="btn btn-gold" href="REPLACE_WITH_GOOGLE_REVIEWS_URL" target="_blank" rel="noopener">Read reviews on Google</a></div>
+      -->
+
     </div>
   </section>
 
@@ -294,11 +336,11 @@
           <span class="t-title">Book via Calendly</span>
           <span class="t-sub">Choose your time that works for you</span>
         </button>
-        <button class="cta-tile light" data-pay="bundle">
+        <a class="cta-tile light" href="#services">
           <span class="t-ico" aria-hidden="true">&#10022;</span>
-          <span class="t-title">Pay via Stripe</span>
-          <span class="t-sub">Secure, simple and easy payments</span>
-        </button>
+          <span class="t-title">View Sessions</span>
+          <span class="t-sub">Choose the session that fits you</span>
+        </a>
       </div>
     </div>
   </section>

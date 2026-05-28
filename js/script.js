@@ -15,10 +15,11 @@ const CONFIG = {
      each link below. Each "Book Now" / "Pay via Stripe" button uses these.
      (See README.md for the alternative Stripe Buy Button method.) */
   stripeLinks: {
-    tarot:      "https://buy.stripe.com/REPLACE_tarot",      // £45
-    numerology: "https://buy.stripe.com/REPLACE_numerology", // £55
-    crystal:    "https://buy.stripe.com/REPLACE_crystal",    // £35
-    bundle:     "https://buy.stripe.com/REPLACE_bundle"      // £99
+    tarot15:   "https://buy.stripe.com/REPLACE_tarot15",   // Tarot Reading 15 min — £23
+    tarot45:   "https://buy.stripe.com/REPLACE_tarot45",   // Tarot Reading 45 min — £69
+    advanced:  "https://buy.stripe.com/REPLACE_advanced",  // Advanced Guidance — £111
+    crystal:   "https://buy.stripe.com/REPLACE_crystal",   // Crystal Guidance — £19
+    cleansing: "https://buy.stripe.com/REPLACE_cleansing"  // Energy Cleansing & Cord Cutting — £23
   },
 
   /* If true, pay buttons open in a new tab; if false, same tab. */
