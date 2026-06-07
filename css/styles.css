@@ -126,7 +126,7 @@ h1,h2,h3,h4{ font-family:var(--serif); color:var(--ink); font-weight:500; line-h
 .brand:hover .brand-mark svg, .brand:hover .brand-mark img{ transform:rotate(120deg); }
 .brand-text{ display:flex; flex-direction:column; line-height:1; }
 .brand-name{ font-family:var(--serif); font-weight:600; font-size:1.32rem; letter-spacing:.22em; color:var(--ink); text-transform:uppercase; }
-.brand-tag{ font-family:var(--sans); font-size:.56rem; letter-spacing:.3em; text-transform:uppercase; color:var(--gold-deep); margin-top:.25rem; }
+.brand-tag{ font-family:var(--sans); font-size:.72rem; letter-spacing:.2em; text-transform:uppercase; color:var(--gold-deep); margin-top:.25rem; }
 
 .main-nav{ display:flex; gap:1.7rem; margin-left:auto; }
 .main-nav a{
@@ -210,7 +210,7 @@ h1,h2,h3,h4{ font-family:var(--serif); color:var(--ink); font-weight:500; line-h
 .services .eyebrow,.how .eyebrow{ display:flex; gap:.7rem; align-items:center; justify-content:center; }
 .services .section-title{ margin-bottom:.8rem; }
 .section-intro{ text-align:center; max-width:60ch; margin:0 auto 2.6rem; color:var(--ink-soft); font-size:1rem; }
-.badge{ display:inline-block; font-family:var(--sans); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase;
+.badge{ display:inline-block; font-family:var(--sans); font-size:.8rem; letter-spacing:.12em; text-transform:uppercase;
   color:var(--gold-deep); background:rgba(184,146,79,.12); border:1px solid rgba(184,146,79,.3);
   border-radius:20px; padding:.25rem .8rem; margin-bottom:.7rem; }
 .addon-head{ text-align:center; font-size:1.5rem; color:var(--ink); margin:3rem 0 1.6rem;
@@ -229,9 +229,9 @@ h1,h2,h3,h4{ font-family:var(--serif); color:var(--ink); font-weight:500; line-h
   background:radial-gradient(circle at 35% 30%,#f3e6d6,#ece0ec); color:var(--gold-deep); }
 .card-ico svg{ width:40px; height:48px; }
 .card h3{ font-size:1.4rem; margin-bottom:.5rem; }
-.card p{ font-size:.9rem; min-height:3.4em; }
-.card .price{ font-family:var(--serif); color:var(--gold-deep); font-size:1.35rem; margin:.9rem 0 1.1rem; min-height:auto; }
-.card .price span{ font-family:var(--sans); font-size:.78rem; color:var(--muted); }
+.card p{ font-size:1rem; min-height:3.6em; line-height:1.65; }
+.card .price{ font-family:var(--serif); color:var(--gold-deep); font-size:1.55rem; margin:.9rem 0 1.1rem; min-height:auto; }
+.card .price span{ font-family:var(--sans); font-size:.92rem; color:var(--muted); }
 .card.featured{ border-color:rgba(184,146,79,.55); background:linear-gradient(180deg,#fdf6ea,var(--card)); }
 .ribbon{ position:absolute; top:-11px; left:50%; transform:translateX(-50%); background:var(--gold);
   color:#3a2a18; font-size:.66rem; letter-spacing:.18em; text-transform:uppercase; padding:.3rem .9rem; border-radius:20px; }
