@@ -4,27 +4,18 @@
    ===================================================================== */
 
 const CONFIG = {
-  /* CALENDLY -----------------------------------------------------------
-     Beyond Realms uses a simple two-step flow:
-       1) Client books a time here in Calendly (and enters their WhatsApp
-          number so Smiti knows where to call).
-       2) The Calendly CONFIRMATION page + email contains the Revolut
-          payment link with a note to pay to confirm.
-     >>> The Revolut link is added inside Calendly's settings, NOT here. <<<
-
-     'calendlyUrl' is the general link used by the "Book a Session" /
-     "Book via Calendly" buttons. 'calendlyLinks' are one event-type per
-     session, used by each "Book Now" button. Create one Calendly event
-     per session (with the correct duration) and paste its link below.
-     Any session left as a REPLACE placeholder falls back to calendlyUrl. */
-  calendlyUrl: "https://calendly.com/your-handle",
+  /* Calendly-only flow.
+     "Book a Session" / "Book via Calendly" → opens calendlyUrl.
+     Each card "Book Now" → opens that session's Calendly event.
+     Stripe payment links live INSIDE each event's Calendly confirmation. */
+  calendlyUrl: "https://calendly.com/smitibajoria/30min",
 
   calendlyLinks: {
-    tarot15:   "https://calendly.com/your-handle/REPLACE_tarot-15min",
-    tarot45:   "https://calendly.com/your-handle/REPLACE_tarot-45min",
-    advanced:  "https://calendly.com/your-handle/REPLACE_advanced",
-    crystal:   "https://calendly.com/your-handle/REPLACE_crystal",
-    cleansing: "https://calendly.com/your-handle/REPLACE_cleansing"
+    tarot15:   "https://calendly.com/smitibajoria/new-meeting",
+    tarot45:   "https://calendly.com/smitibajoria/30min",
+    advanced:  "https://calendly.com/smitibajoria/astrology",
+    crystal:   "https://calendly.com/smitibajoria/crystal-consult",
+    cleansing: "https://calendly.com/smitibajoria/cleansing-and-cord-cutting"
   }
 };
 
